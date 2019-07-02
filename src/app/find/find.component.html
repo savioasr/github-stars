@@ -1,0 +1,20 @@
+<div class="container-loading-off">
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-signin" style="position:absolute; top:35%;left:50%; margin-left:-165px">
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-prepend">
+                    <button class="btn btn-primary" type="button">https://github.com/</button>
+                </span>
+                <input type="text" formControlName="user" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.user.errors }" />
+                <div *ngIf="submitted && f.user.errors" class="invalid-feedback">
+                    <div *ngIf="f.user.errors.required">Campo obrigatório.</div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary">get repositories</button>
+
+    </form>
+
+</div>

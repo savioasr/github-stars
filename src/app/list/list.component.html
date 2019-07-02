@@ -1,0 +1,25 @@
+<div class="container">
+
+    <input (keyup)="find($event)" type="text" class="form-control" style="width:300px" placeholder="search by tag" autocomplete="off"><br>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Repository</th>
+                <th>Description</th>
+                <th>Language</th>
+                <th>Tags</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let repository of repositories">
+                <td>{{ repository.name }}</td>
+                <td>{{ repository.description }}</td>
+                <td>{{ repository.lang }}</td>
+                <td>{{ repository.tags }}</td>
+                <td><a href="javascript:void(0)" (click)="edit(repository.id)">edit</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
