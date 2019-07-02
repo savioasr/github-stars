@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class StarService {
 
-    private readonly URI = `/api`;
+    private readonly URI = `https://www.getmamute.com/server.php?URI=https://github.com/`;
 
     constructor(private http: HttpClient) { }
 
